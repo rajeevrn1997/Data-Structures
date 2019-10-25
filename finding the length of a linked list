@@ -1,0 +1,9 @@
+//to find the length of the linked list
+public static int findlength(Node<Integer>head)
+{
+int length=0;
+while(head!=null)
+{length++;
+}
+return length;
+}
