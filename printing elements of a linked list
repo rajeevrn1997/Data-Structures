@@ -1,0 +1,40 @@
+//the elements of this linked list will be of String kind
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {
+		Node<String>node1=new Node<String>("man");
+		Node<String>node2=new Node<String>("man");
+		Node<String>node3=new Node<String>("man");
+		Node<String>node4=new Node<String>("man");
+		Node<String>node5=new Node<String>("man");
+		node1.next=node2;
+		node2.next=node3;
+		node3.next=node4;
+		node4.next=node5;
+		//to print all the strings in the linked list
+		Node<String>head=node1;
+		print(head);//notice that only the copies of the head variable are being passed to the function
+		print(head);
+		
+}
+	public static void print(Node<String>head)
+	{
+	    	while(head!=null)
+		{
+		    System.out.print(head.data +"  ");
+		    head=head.next;
+		}
+	}
+}
+class Node<T>//so that any kind of data can be stored
+{
+    T data;
+    Node next;
+    Node(T data)
+    {
+        this.data=data;
+        next=null;
+    }
+}
