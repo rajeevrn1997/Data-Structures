@@ -1,0 +1,12 @@
+the ith element of the linked list(from the start)
+public static void printithelement(Node<Integer>head,int i)
+{int count=0;
+while(head!=null)
+{if(count==i)
+{System.out.println(head.data);
+break;
+}
+count++;
+head=head.next;
+}
+}
