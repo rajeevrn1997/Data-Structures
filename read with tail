@@ -1,0 +1,30 @@
+//read the contents of the linked list with the tail
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+	
+	public static Node<Integer> takeinput()
+	{
+	    
+	    Node<Integer>head=null;
+	    Node<Integer>tail=null;
+	    Scanner s=new Scanner(System.in);
+	    int data=s.nextInt();
+	    while(data != -1)
+	    {
+	        Node<Integer>newnode=new Node<Integer>(data);
+	        if(head==null)
+	        {head=newnode;
+	            tail=newnode;
+	        }
+	        else{tail.next=newnode;}
+	        tail=tail.next;//as we have a new node
+	    }
+	    data=s.nextInt();
+	}
+	return head;
+}
