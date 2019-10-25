@@ -1,0 +1,40 @@
+//all the elements store the address of the element next to it
+//to print all the elements in an linked list
+public class Main
+{
+	public static void main(String[] args) {
+		Node<Integer>node1=new Node<Integer>(3);
+		System.out.println(node1.data);
+	
+		System.out.println(node1.next);
+		Node<Integer>node2=new Node<Integer>(34);
+			node1.next=node2;
+		
+		Node<Integer>node3=new Node<Integer>(23);
+		node2.next=node3;
+		
+		
+		
+		Node<Integer>node4=new Node<Integer>(3);
+		node4.next=null;//being the last node in the linked list being considered
+		node3.next=node4;
+		Node<Integer>head=node1;
+		System.out.println(head.data);
+		while(head.next !=null)
+		{
+		    System.out.print(head.data+" ");
+		    head=head.next;
+		}
+	}
+}
+class Node<T>//so that we can store data of any kind
+{
+    
+    T data;//the data field
+    Node next;//the address field
+    Node(T data)//all the nodes will of the same kind,containing the similar datafields
+    {
+        this.data=data;
+        next=null;
+    }
+}
