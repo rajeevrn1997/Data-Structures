@@ -1,0 +1,37 @@
+//to make an array without any fixed length 
+import java.util.ArrayList;
+
+public class Main
+{
+	public static void main(String[] args) {//the datatype here must be a class 
+		ArrayList<Integer>list1=new ArrayList<Integer>();//here the default capacity is 10 and the size is 0 as there is no element in the ArrayList
+		list1.add(23);
+		list1.add(56);//list1.add(index,value);//when we put something at the preexisting index then all the indexes are shifted in one plce to the right
+		list1.add(34);
+		
+		//list1.add(4,34);this would also generate exception as we cannot leave a place unfilled while setting up a list1
+		for(int elem :list1)//for each loop in java,this can only be used for printing the elements not for changing the elemnts in a collection
+		
+		{
+		    System.out.println(elem);
+		}
+		for(int i=0;i<list1.size();i++)
+		{
+		    System.out.println(list1.get(i));
+		        
+		   
+		}
+		list1.remove(1);//removes the element at the specified element
+		for(int i=0;i<list1.size();i++)
+		{
+		    System.out.println(list1.get(i));
+		        
+		   
+		}
+		list1.set(1,30);//this puts the value into the list without changing the size of the ArrayList,unlike it used to happen in the case of add function
+		//System.out.println(list1.get(0));//to get an element at any given index
+		//System.out.println(list1.size());
+		
+        //System.out.println(list1.get(5));this would generate the out of bound Exception in the code
+	}
+}
