@@ -1,0 +1,14 @@
+//to delete a node in the linked list
+public static Node<Integer> delete(Node<Integer>head,int i)
+{int pos=0;
+Node<Integer>temp=head;
+
+while(pos<i-1)
+{temp=temp.next;
+pos++;
+}
+if(temp.next!=null)//their is a node at the given position
+{temp.next=temp.next.next;
+}
+return head;
+}
